@@ -1403,4 +1403,4 @@ if (ipv4 == True): #exposição
     print ("IP: "+ '\033[31m'+x+'\033[0;0m')
     print ("NET ID :"+'\033[32m'+ netid + '\033[0;0m')
     print("HOST ID :"+'\033[31m' + x.replace(netid,"") +'\033[0;0m')
-    print ('\033[32m'+classe+'\033[0;0m'))
+    print ('\033[32m'+classe+'\033[0;0m')
