@@ -1370,8 +1370,10 @@ def converter(dec):
     return(bi)                                    
 x = ""
 ipv4 = True
+decip = ""
 for c in range (4): #4 octetos
     dec = int(input("Digite um número decimal inteiro: "))
+    decip += str(dec) + "."
     if (dec > 255):
         print("Isto não é um IPV4")
         ipv4 = False #cancela todas as ações
@@ -1397,10 +1399,11 @@ for c in range (4): #4 octetos
     if (c == 1 and classe == "CLASSE B"): #dois octetos
         netid = x
     if (c == 2 and classe == "CLASSE C"): #três octetos
-        netid = x 
+        netid = x
 
 if (ipv4 == True): #exposição
+    print ("DECIMAL IP: "+ '\033[31m'+ decip +'\033[0;0m')
     print ("IP: "+ '\033[31m'+x+'\033[0;0m')
     print ("NET ID :"+'\033[32m'+ netid + '\033[0;0m')
     print("HOST ID :"+'\033[31m' + x.replace(netid,"") +'\033[0;0m')
-    print ('\033[32m'+classe+'\033[0;0m')
+    print ('\033[32m'+ classe +'\033[0;0m')
